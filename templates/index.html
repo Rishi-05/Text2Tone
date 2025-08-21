@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text and PDF to Audio Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="navbar-links">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="#">AI Voices</a>
+      <a href="#">Pricing</a>
+    </div>
+    <div class="auth-buttons">
+      <a href="{{ url_for('logout') }}" class="logout">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Text to Audio Section -->
+    <form action="/generate_text" method="post" id="audioForm">
+      <h2>🎙️ Generate Audio</h2>
+      <textarea name="text" placeholder="Enter your text here..." required></textarea>
+
+      <div class="settings-panel">
+        <div class="slider-wrapper">
+          <label for="voice_volume">🔊 Volume</label>
+          <input type="range" name="voice_volume" id="voice_volume" min="-20" max="20" value="0">
+          <span id="volume_value">0dB</span>
+        </div>
+
+        <div class="slider-wrapper">
+          <label for="voice_speed">⚡ Speed</label>
+          <input type="range" name="voice_speed" id="voice_speed" min="-100" max="100" value="0">
+          <span id="speed_value">0%</span>
+        </div>
+      </div>
+
+      <label for="voice_type" class="voice-label">🎤 Voice</label>
+      <select name="voice_type" id="voice_type">
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select>
+
+      <input type="submit" value="Generate Audio">
+    </form>
+
+<div class="button-audio-container">
+  <a href="/pdf-to-audio" class="link-button">📄 Convert PDF to Audio</a>
+
+  {% if audio_files %}
+    {% for audio_file in audio_files %}
+      <div class="audio-box">
+        <audio controls>
+          <source src="{{ url_for('audio', filename=audio_file) }}" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+        <p>{{ audio_file }}</p>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and PDF to Audio Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">
+           <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo"><p>EchoMatic</p>
+        </div>
+        <div class="navbar-links">
+            <a href="">AI Voices</a>
+            <a href="">Pricing</a>
+        </div>
+        <div class="auth-buttons">
+            <a href="{{ url_for('login') }}" class="login">Log in</a>
+            <a href="{{ url_for('register') }}" class="register">Register</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title-bar">
+            <h1>Text to Audio Generator</h1>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+            <span>EchoMatic</span>
+        </div>
+        <div class="footer-links">
+            <a href="#">Developer API</a>
+            <a href="#">Changelog <span style="color:green; font-weight:bold;">v1.6</span></a>
+            <a href="#">System Status</a>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+            <a href="#">Help Center</a>
+            <a href="#">How to Use?</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">GDPR Policy</a>
+            <a href="#">Security Policy</a>
+        </div>
+        <div class="social-media">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+            © 2024 EchoMatic Technologies Pvt. Ltd. All rights reserved.
+        </div>
+    </div>
+
+    <!-- You can include FontAwesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

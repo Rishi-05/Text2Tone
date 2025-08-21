@@ -1,0 +1,155 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title-bar {
+    background-color: #4A90E2;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar-logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #4A90E2;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    color: #4A90E2;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons a {
+    padding: 8px 15px;
+    border: 2px solid #4A90E2;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-buttons a.login {
+    color: #4A90E2;
+}
+
+.auth-buttons a.register {
+    background-color: #4A90E2;
+    color: white;
+}
+
+.auth-buttons a:hover {
+    opacity: 0.8;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer .footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer .footer-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer .footer-logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer .footer-links a {
+    margin: 10px 20px;
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer .footer-links a:hover {
+    color: #007bff;
+}
+
+.footer .social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer .social-media a {
+    margin: 0 10px;
+    color: #666;
+    font-size: 18px;
+}
+
+.footer .social-media a:hover {
+    color: #007bff;
+}
+
+.footer .copyright {
+    font-size: 12px;
+    color: #999;
+}

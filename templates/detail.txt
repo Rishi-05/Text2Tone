@@ -1,0 +1,19 @@
+*from flask import
+Flask -> used to create flask app
+render_template -> used to render the HTML templates (index.html)
+request -> handles incoming data from user
+send_from_directory -> sends files from specific directory
+
+*from gtts import
+gTTs -> google text to speech library
+
+*import
+pdfplumber -> used to extract text from pdf
+os -> used for file and directory operations
+files -> used to generate unique filenames
+
+app = Flask(__name__)                     -> Flask app initialization
+AUDIO_DIR = 'audio_files'                 -> directory path where audio files will be stored
+os.makedirs(AUDIO_DIR, exist_ok=True)     -> creates directory audio_files if it doesn't already exist
+( audio_files=[], pdf_audio_file=None)    -> ensuring the page loads with no audio displayed initially.
+
